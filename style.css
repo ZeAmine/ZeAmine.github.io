@@ -86,15 +86,15 @@ header {
   }
   55% {
     opacity: 1;
-    top: 28px;
+    top: 30px;
   }
   78% {
     opacity: 1;
-    top: 28px;
+    top: 30px;
   }
   100% {
     opacity: 0;
-    top: 28px;
+    top: 30px;
   }
 }
 
