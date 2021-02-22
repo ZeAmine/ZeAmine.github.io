@@ -134,7 +134,6 @@ header {
   color: var(--black);
   position: relative;
 }
-
 .na-list li a::before {
   content: "";
   position: absolute;
@@ -426,10 +425,13 @@ header {
 .mode-sombre span,
 .mode-sombre ion-icon,
 .mode-sombre .na-list li a,
-.mode-sombre .na-list li a:before,
 .mode-sombre .project-list li a,
 .mode-sombre .project-list li p {
   color: var(--saumon);
+}
+
+.mode-sombre .na-list li a::before {
+  background-color: var(--saumon);
 }
 
 .mode-sombre .project-list li a::after {
