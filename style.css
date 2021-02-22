@@ -46,7 +46,6 @@ header {
 }
 
 .na-mode {
-  /* background-color: green; */
   width: 145px;
   height: 100%;
   display: flex;
@@ -103,7 +102,6 @@ header {
   line-height: 80px;
 }
 .na-logo h1 {
-  /* background-color: green; */
   font-family: "Montserrat", sans-serif;
   font-size: 24px;
   font-weight: 400;
@@ -112,7 +110,6 @@ header {
 }
 
 .na-list {
-  /* background-color: green; */
   display: flex;
   align-items: center;
   line-height: 80px;
@@ -135,7 +132,6 @@ header {
 }
 
 .section-wrapper {
-  /* background-color: aqua; */
   display: flex;
   align-items: center;
   width: 100%;
@@ -145,7 +141,6 @@ header {
 }
 
 .sc-left {
-  /* background-color: purple; */
   display: flex;
   width: 40%;
   height: 100%;
@@ -153,7 +148,6 @@ header {
 }
 
 .project-list {
-  /* background-color: yellow; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -161,41 +155,6 @@ header {
   height: 450px;
   margin: auto;
   position: relative;
-}
-.title p {
-  position: absolute;
-  right: 210px;
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--black);
-  opacity: 0;
-}
-
-.opacity-active {
-  animation: opacity-ac 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-}
-@keyframes opacity-ac {
-  0% {
-    opacity: 0;
-    right: 120px;
-  }
-  100% {
-    opacity: 1;
-    right: 210px;
-  }
-}
-.opacity-disable {
-  animation: opacity-di 0.3s cubic-bezier(0.95, 0.55, 0.05, 0.445);
-}
-@keyframes opacity-di {
-  0% {
-    opacity: 1;
-    right: 210px;
-  }
-  100% {
-    opacity: 0;
-    right: 120px;
-  }
 }
 
 .project-list span {
@@ -205,8 +164,8 @@ header {
   top: -70px;
   left: 0;
 }
+
 .project-list li {
-  /* background-color: red; */
   position: relative;
 }
 /* .project-list li:nth-child(2) a {
@@ -239,10 +198,43 @@ header {
   width: 60px;
 }
 
+.project-list li p {
+  position: absolute;
+  right: 210px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--black);
+  opacity: 0;
+}
+.opacity-active {
+  animation: opacity-ac 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+@keyframes opacity-ac {
+  0% {
+    opacity: 0;
+    right: 120px;
+  }
+  100% {
+    opacity: 1;
+    right: 210px;
+  }
+}
+.opacity-disable {
+  animation: opacity-di 0.3s cubic-bezier(0.95, 0.55, 0.05, 0.445);
+}
+@keyframes opacity-di {
+  0% {
+    opacity: 1;
+    right: 210px;
+  }
+  100% {
+    opacity: 0;
+    right: 120px;
+  }
+}
 /* _____________________RIGHT_________________________ */
 
 .sc-right {
-  /* background-color: red; */
   width: 50%;
   height: 100%;
   margin: auto;
@@ -286,11 +278,64 @@ header {
   z-index: 10;
 }
 
+/* -------------------------INFO-------------------------- */
+
+.sc-info {
+  /* background-color: red; */
+  position: absolute;
+  right: 173px;
+  width: 48%;
+  height: 100px;
+  margin-top: 50px;
+  overflow: hidden;
+}
+.container-info {
+  /* background-color: #562b2e; */
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  position: absolute;
+  opacity: 0;
+}
+.container-info:first-child {
+  opacity: 1;
+  z-index: 10;
+}
+.title-info {
+  /* background-color: beige; */
+  width: 35%;  
+}
+.title-info h4 {
+  font-family: Walkester, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--black);
+  letter-spacing: 1px;
+}
+.title-info p {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--black);
+}
+
+.subtitle-info {
+  /* background-color: blueviolet; */
+  padding: 15px 0;
+  width: 65%;
+}
+.subtitle-info p {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--black);
+}
+
 /* _______________________RESEAUX_________________________ */
 
 .social {
   position: absolute;
-  bottom: 15px;
+  bottom: 25px;
   left: 30px;
   width: 250px;
   height: 50px;

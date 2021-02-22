@@ -4,7 +4,10 @@ const allImg = document.querySelectorAll(".item");
 const modeBtn = document.querySelector(".na-mode button");
 const modeSpan = document.querySelector(".na-mode span");
 const modeIcon = document.querySelector("button ion-icon");
+
 const appearP = document.querySelectorAll(".title p");
+
+const allInfo = document.querySelectorAll(".container-info");
 
 let mode = false;
 let enter = false;
@@ -14,6 +17,15 @@ listA.forEach((a) => {
     enter = true;
     opacity(a);
 
+    for (const info of allInfo) {
+      if (info.dataset.key === a.dataset.key) {
+        info.style.zIndex = 10;
+        info.style.opacity = 1;
+      } else {
+        info.style.zIndex = 0;
+        info.style.opacity = 0;
+      }
+    }
     for (const img of allImg) {
       if (img.dataset.key === a.dataset.key) {
         img.style.zIndex = 10;
