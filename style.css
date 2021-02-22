@@ -32,7 +32,7 @@ body {
 
 header {
   width: 100%;
-  height: 80px;
+  height: 85px;
 }
 
 .navbar {
@@ -99,20 +99,31 @@ header {
 }
 
 .na-logo {
-  line-height: 80px;
+  /* line-height: 80px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .na-logo h1 {
   font-family: "Montserrat", sans-serif;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 400;
   color: var(--black);
   letter-spacing: 8px;
+}
+.na-logo p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .na-list {
   display: flex;
   align-items: center;
   line-height: 80px;
+  position: relative;
 }
 .na-list li:not(:last-child) {
   margin-right: 42px;
@@ -121,6 +132,24 @@ header {
   font-size: 16px;
   font-weight: 600;
   color: var(--black);
+  position: relative;
+}
+
+.na-list li a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 100%;
+  left: 0;
+  background-color: var(--black);
+  pointer-events: none;
+  transform-origin: 0% 100%;
+  transform: scale3d(0, 1, 1);
+  transition: transform 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.na-list li a:hover::before {
+  transform: scale3d(1, 2, 1);
 }
 
 /* _____________________LEFT_________________________ */
@@ -280,13 +309,21 @@ header {
 
 /* -------------------------INFO-------------------------- */
 
-.sc-info {
-  /* background-color: red; */
+/* .sc-info {
   position: absolute;
   right: 173px;
   width: 48%;
   height: 100px;
   margin-top: 50px;
+  overflow: hidden;
+} */
+.sc-info {
+  /* background-color: red; */
+  position: absolute;
+  right: 145px;
+  width: 48%;
+  height: 100px;
+  margin-top: 30px;
   overflow: hidden;
 }
 .container-info {
@@ -303,9 +340,11 @@ header {
   opacity: 1;
   z-index: 10;
 }
+
 .title-info {
   /* background-color: beige; */
-  width: 35%;  
+  width: 35%;
+  line-height: 30px;
 }
 .title-info h4 {
   font-family: Walkester, sans-serif;
@@ -315,7 +354,7 @@ header {
   letter-spacing: 1px;
 }
 .title-info p {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   color: var(--black);
 }
@@ -382,17 +421,17 @@ header {
   background-color: var(--black);
 }
 .mode-sombre h1,
+.mode-sombre h4,
 .mode-sombre p,
 .mode-sombre span,
 .mode-sombre ion-icon,
 .mode-sombre .na-list li a,
-.mode-sombre .na-list li a:before {
+.mode-sombre .na-list li a:before,
+.mode-sombre .project-list li a,
+.mode-sombre .project-list li p {
   color: var(--saumon);
 }
 
-.mode-sombre .project-list li a {
-  color: var(--saumon);
-}
 .mode-sombre .project-list li a::after {
   background-color: var(--saumon);
 }
