@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Amine Zegmou</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="na-mode">
+          <button><ion-icon name="contrast-outline"></ion-icon></button>
+          <span class="mode"></span>
+        </div>
+        <div class="na-logo">
+          <a href="#"><h1>amine</h1></a>
+        </div>
+        <ul class="na-list">
+          <li class="na-item"><a class="na-link" href="#">A Propos</a></li>
+          <li class="na-item"><a class="na-link" href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="section">
+      <div class="section-wrapper">
+        <div class="sc-left">
+          <ul class="project-list">
+            <span>4 Projets</span>
+            <li class="title title--1">
+              <a data-key="1" href="#">Pomodoro</a>
+              <p data-key="1">En savoir plus</p>
+            </li>
+            <li class="title title--2">
+              <a data-key="2" href="#">To-do list</a>
+              <p data-key="2">En savoir plus</p>
+            </li>
+            <li class="title title--3">
+              <a data-key="3" href="#">Formulaire</a>
+              <p data-key="3">En savoir plus</p>
+            </li>
+            <li class="title title--4">
+              <a data-key="4" href="#">Memory card</a>
+              <p data-key="4">En savoir plus</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sc-right">
+          <div
+            data-key="1"
+            class="item item--1"
+            style="background-image: url(./projets/pomodoroPort.png)"
+          ></div>
+          <div
+            data-key="2"
+            class="item item--2"
+            style="background-image: url(./projets/todo_listPort.png)"
+          ></div>
+          <div
+            data-key="3"
+            class="item item--3"
+            style="background-image: url(./projets/formulairePort.png)"
+          ></div>
+          <div
+            data-key="4"
+            class="item item--4"
+            style="background-image: url(./projets/memory_cardPort.png)"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-img">
+      <div class="title-info"></div>
+      <div class="subtitle-info"></div>
+    </div>
+
+    <div class="social">
+      <a
+        href="https://github.com/ZeAmine"
+        target="_blank"
+        class="social-logo"
+        aria-label="GitHub"
+      >
+        <ion-icon name="logo-github"></ion-icon>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/amine-zegmou-8154901bb/"
+        target="_blank"
+        class="social-logo"
+        aria-label="LinkedIn"
+      >
+        <ion-icon name="logo-linkedin"></ion-icon>
+      </a>
+      <a href="#" target="_blank" class="social-logo" aria-label="Twitter">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </a>
+    </div>
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
