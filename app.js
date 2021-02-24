@@ -85,3 +85,28 @@ function effect() {
     }, 800);
   }
 }
+
+//Animation
+
+function logoAppear() {
+  const tl = new gsap.timeline();
+  tl.from(".na-logo", {
+    duration: 1.5,
+    delay: 0.7,
+    y: 500,
+    ease: Power3.easeInOut,
+  });
+}
+logoAppear();
+
+function bodyAppear() {
+  const tl = new gsap.timeline();
+  tl.from([".section", ".na-list", ".na-mode", ".social"], {
+    duration: 1.6,
+    delay: 1.4,
+    opacity: 0,
+    y: 20,
+    ease: Power3.easeInOut,
+  });
+}
+bodyAppear();
