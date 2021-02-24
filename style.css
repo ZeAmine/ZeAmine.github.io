@@ -88,7 +88,7 @@ header {
     opacity: 1;
     top: 30px;
   }
-  78% {
+  80% {
     opacity: 1;
     top: 30px;
   }
@@ -235,7 +235,7 @@ header {
   opacity: 0;
 }
 .opacity-active {
-  animation: opacity-ac 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  animation: opacity-ac 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
 }
 @keyframes opacity-ac {
   0% {
@@ -248,16 +248,17 @@ header {
   }
 }
 .opacity-disable {
-  animation: opacity-di 0.3s cubic-bezier(0.95, 0.55, 0.05, 0.445);
+  animation: opacity-di 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards
+    reverse;
 }
 @keyframes opacity-di {
   0% {
-    opacity: 1;
-    right: 210px;
-  }
-  100% {
     opacity: 0;
     right: 120px;
+  }
+  100% {
+    opacity: 1;
+    right: 210px;
   }
 }
 /* _____________________RIGHT_________________________ */
@@ -385,6 +386,10 @@ header {
 .social ion-icon {
   font-size: 22px;
   color: var(--black);
+}
+.social a:last-child ion-icon {
+  display: none;
+  pointer-events: none;
 }
 
 .social-logo {
